@@ -19,6 +19,8 @@ import Register from './routes/register.jsx';
 import RegisterStore from './routes/registerStore.jsx'
 import StorePage from './routes/storePage.jsx';
 import StorePanel from './routes/storePanel.jsx';
+import Promociones from './routes/promociones.jsx';
+
 
 function App() {
   const { user } = useAuthContext()
@@ -36,6 +38,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/product/:URLName" element={<ProductPage />} />
           <Route path="/store/:URLName" element={<StorePage />} />
+          <Route path="/promociones" element={<Promociones />} />
+
         </Routes>
       </BrowserRouter>
     </div>

@@ -22,9 +22,8 @@ const Header = () => {
   const categories = [
     "Tecnología",
     "Hogar",
-    "Moda",
-    "Deportes",
-    "Cultura Local",
+    "Indumentaria",
+    
   ];
 
   return (
@@ -51,22 +50,13 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white hover:text-yellow-300 transition-colors"
-                >
-                  Sobre Nosotros
-                </Link>
+                <Link to="/about" className="text-white hover:text-yellow-300 transition-colors">Sobre Nosotros </Link>
               </li>
               <li>
-                <Link to="/search" className="text-white hover:text-yellow-300 transition-colors"
-                >
-                  Buscador
-                </Link>
+                <Link to="/search" className="text-white hover:text-yellow-300 transition-colors">Buscador</Link>
               </li>
               <li>
-                <Link to="/promotions" className="text-white hover:text-yellow-300 transition-colors"
-                >
-                  Promociones
-                </Link>
+                <Link to="/promociones" className="text-white hover:text-yellow-300 transition-colors">Promociones</Link>
               </li>
             </ul>
             

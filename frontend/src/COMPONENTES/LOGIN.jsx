@@ -9,13 +9,13 @@ const Login = ({ onClose }) => {
 
   return (
     <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 z-50">
-      <div className="bg-beige-claro rounded-lg p-8 max-w-md w-full relative shadow-lg"> {/* Fondo en beige claro */}
+      <div className="bg-gray-100 rounded-lg p-8 max-w-md w-full relative shadow-lg"> {/* Fondo en beige claro */}
         {/* Botón de cerrar */}
-        <button className="absolute top-4 right-4 text-rojo-granate font-bold" onClick={() => onClose()}>X</button>
+        <button className="absolute top-4 right-4 text-red-800 font-bold" onClick={() => onClose()}>X</button>
         
         {/* Título del formulario */}
-        <h2 className="text-3xl font-bold mb-4 text-verde-oliva">{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</h2>
-        <h3 className="text-sm text-verde-oliva mb-8">
+        <h2 className="text-sm text-gray-900 mb-8">{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</h2>
+        <h3 className="text-sm text-gray-600 mb-8">
           {isRegistering ? 'Ingresa tus datos para registrarte' : 'Ingresa tus credenciales'}
         </h3>
 
@@ -24,7 +24,7 @@ const Login = ({ onClose }) => {
           {isRegistering && (
             <div>
               <input
-                className="appearance-none block w-full bg-white text-verde-oliva rounded py-3 px-4 leading-tight focus:outline-none focus:border-rojo-granate"
+                className="appearance-none block w-full bg-white text-gray-900 rounded py-3 px-4 leading-tight focus:outline-none focus:border-red-800"
                 type="text"
                 placeholder="Nombre Completo"
               />
