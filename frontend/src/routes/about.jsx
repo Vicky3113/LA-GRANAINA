@@ -8,32 +8,37 @@ import Offer from "../COMPONENTES/service.jsx";
 import CardCarousel from "../COMPONENTES/novedades.jsx";
 import Section from "../COMPONENTES/feactures.jsx";
 import ProductCardLoading from "../COMPONENTES/productCardLoading.jsx";
+import SectionLink from '../COMPONENTES/SectionLink';
 import Footer from "../COMPONENTES/footer.jsx";
 
 function AboutUs() {
   const links = [
-    { name: "Open roles", href: "#" },
-    { name: "Internship program", href: "#" },
-    { name: "Our values", href: "#" },
-    { name: "Meet our leadership", href: "#" },
+    { name: "Compromiso con Granada", href: "#" },
+    { name: "Oportunidades para Emprendedores/as", href: "#" },
+    { name: "Nuestros valores", href: "#" },
+    { name: "Conoce a nuestro equipo", href: "#" },
   ];
 
   const stats = [
-    { name: "Offices worldwide", value: "12" },
-    { name: "Full-time colleagues", value: "300+" },
-    { name: "Hours per week", value: "40" },
-    { name: "Paid time off", value: "Unlimited" },
+    { name: "Nuestras tiendas", value: "12" },
+    { name: "Equipo en  crecimiento", value: "300+" },
+    { name: "Dedicación  a nuestros clientes", value: "40" },
+    { name: "Compromiso  con  la ética empresarial", value: "Unlimited" },
   ];
 
   return (
     <div className="App">
       <Header />
-      <div className="relative isolate overflow-hidden bg-white-300 py-24 sm:py-32">
+      <div className="relative isolate overflow-hidden bg-gray-800 py-24 sm:py-32"> {/* Fondo gris oscuro */}
+
         <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+          src="https://images.unsplash.com/photo-1714834722006-e07485788cde?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
         />
+        {/* Degradado oscuro encima de la imagen */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent -z-10"></div>
+
         <div
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
           aria-hidden="true"
@@ -59,14 +64,15 @@ function AboutUs() {
           />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Work with us
+          <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl bg-black bg-opacity-50 p-4 rounded-lg">
+              Quiénes somos
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+            <p className="mt-6 text-lg leading-8 text-gray-300 bg-black bg-opacity-50 p-4 rounded-lg">
+            Somos un equipo apasionado de la ciudad de Granada, 
+            comprometido con impulsar la venta de productos locales que abarcan
+             desde artículos para el hogar e indumentaria hasta tecnología y mucho más. 
+             Creemos en la calidad y en apoyar a nuestra comunidad ofreciendo una variedad de categorías que reflejan el talento y la dedicación de nuestros productores locales.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -97,13 +103,13 @@ function AboutUs() {
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Trusted by eCommerce Businesses
+            Calidad local,  compromiso local
             </h2>
 
             <p className="mt-4 text-gray-500 sm:text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              dolores laborum labore provident impedit esse recusandae facere
-              libero harum sequi.
+            Nuestro compromiso es con la comunidad y el talento local, ofreciendo productos de calidad
+             que representan el espíritu de Granada. Creemos en la colaboración y el apoyo a nuestros productores 
+             y productoras locales, asegurándonos de llevar lo mejor de nuestra región a cada hogar
             </p>
           </div>
 
@@ -111,37 +117,91 @@ function AboutUs() {
             <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
-                  Total Sales
+                  Clientes satisfechos
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                  $4.8m
+                <dd className="text-4xl font-extrabold text-[#a23e48] md:text-5xl">
+                  1.7k
                 </dd>
               </div>
 
               <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
-                  Official Addons
+                  Productores y productoras locales
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                  24
+                <dd className="text-4xl font-extrabold text-[#a23e48] md:text-5xl">
+                  73
                 </dd>
               </div>
 
               <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
-                  Total Addons
+                  Productos exclusivos de Granada
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                  86
+                <dd className="text-4xl font-extrabold text-[#a23e48] md:text-5xl">
+                  120
                 </dd>
               </div>
             </dl>
           </div>
         </div>
       </section>
+
+      {/* Enlaces a cada sección al inicio de la página NUEVOS CONTENIDOS EN ABOUT */}
+
+               
+
+<nav className="flex justify-center space-x-8 my-8">
+  <a href="#compromiso" className="text-white hover:text-red-400">Compromiso con Granada</a>
+  <a href="#oportunidades" className="text-white hover:text-red-400">Oportunidades para emprendedores</a>
+  <a href="#valores" className="text-white hover:text-red-400">Nuestros valores</a>
+  <a href="#equipo" className="text-white hover:text-red-400">Conoce a nuestro equipo</a>
+</nav>
+
+{/* Secciones que usan el componente SectionLink */}
+
+
+  <SectionLink 
+    id="compromiso"
+    title="Compromiso con Granada"
+    content="Nuestro compromiso con Granada es profundo y constante. A través de la venta de productos locales, apoyamos a nuestros productores y creadoras locales, impulsando el crecimiento económico y el desarrollo sostenible de nuestra región. Nos enorgullece llevar lo mejor de Granada a cada hogar, promoviendo una comunidad fuerte y unida."
+    className="mx-auto max-w-3xl px-8 py-6 text-white bg-gray-100 rounded-lg my-8 text-center shadow-md"
+     imageURL="https://images.unsplash.com/photo-1722466125996-728f52108eee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8R3JhbmFkYSUyMGVzcGElQzMlQjFhJTIwY29tZXJjaW9zfGVufDB8fDB8fHww"
+
+/>
+
+
+<SectionLink 
+  id="oportunidades"
+  title="Oportunidades para emprendedores"
+  content="Creemos en el poder de la innovación y el emprendimiento. Por eso, trabajamos junto a emprendedores como Ana Ruiz, creadora de artesanías únicas, Carlos Morales, experto en tecnología ecológica, y Julia Fernández, quien lidera su propio negocio de textiles sostenibles. Ellos y muchos más encuentran en nosotros una plataforma para destacar y compartir su talento con toda la comunidad"
+  className="mx-auto max-w-3xl px-8 py-6 text-white bg-gray-100 rounded-lg my-8 text-center shadow-md"
+  imageURL="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVxdWlwbyUyMHBlcnNvbmFzJTIwbmVnb2Npb3N8ZW58MHx8MHx8fDA%3D"
+ 
+
+/>
+
+<SectionLink 
+  id="valores"
+  title="Nuestros valores"
+  content="Nos guiamos por principios sólidos de integridad, compromiso y transparencia. Cada producto y servicio que ofrecemos refleja nuestra dedicación a la calidad, la ética y el respeto por nuestro entorno. Valoramos las relaciones duraderas y la confianza de nuestra comunidad, y trabajamos día a día para mantener esos valores en todo lo que hacemos."
+  className="mx-auto max-w-3xl px-8 py-6 text-white bg-gray-100 rounded-lg my-8 text-center shadow-md"
+  imageURL= "https://plus.unsplash.com/premium_photo-1661636022082-f9ae32ba5545?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGV0aWNhfGVufDB8fDB8fHww"
+
+/>
+
+<SectionLink 
+  id="equipo"
+  title="Conoce a nuestro equipo"
+  content="Nuestro equipo está formado por personas apasionadas y comprometidas con nuestra misión. Marta Gómez, directora de relaciones con la comunidad, aporta su experiencia en proyectos locales. José Martínez, nuestro especialista en logística, garantiza que cada pedido llegue en perfectas condiciones. Y Lucía Herrera, encargada de innovación, asegura que siempre avancemos con ideas frescas y sostenibles."
+  className="mx-auto max-w-3xl px-8 py-6 text-white bg-gray-100 rounded-lg my-8 text-center shadow-md"
+  imageURL="https://unsplash.com/es/fotos/emprendedores-y-empresarios-exitosos-que-logran-objetivos-Pxz75CRqvkM"
+
+/>
+
+
       {/* Seccion 2*/}
       <Footer />
     </div>

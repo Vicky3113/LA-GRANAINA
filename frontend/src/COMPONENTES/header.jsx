@@ -20,54 +20,70 @@ const Header = () => {
   };
 
   const categories = [
-    "Category 1",
-    "Category 2",
-    "Category 3",
-    "Category 4",
-    "Category 5",
-    "Category 6",
+    "Tecnología",
+    "Hogar",
+    "Moda",
+    "Deportes",
+    "Cultura Local",
   ];
 
   return (
-    <header className="bg-gray-800 text-white flex py-3 justify-center px-4">
+    <header className="bg-red-800 text-gray-300 flex py-3 justify-center px-4 shadow-md">
       <div className="max-w-7xl w-full flex justify-between gap-5 items-center h-10">
+        
         <div className="flex gap-5">
-          <h1 className="text-xl font-bold">Logo</h1>
+          {/* Logo con imagen */}
+          <Link to="/">
+            <img
+              src="public/images/imagenes/logo.png"  // Ruta del logo en la carpeta public
+              alt="Logo"
+              className="h-10 w-auto"  // Tamaño del logo ajustado
+            />
+          </Link>
+
+          {/* Menú de navegación */}
           <nav className="flex items-center space-x-9">
             <ul className="flex gap-5">
               <li>
-                <Link to="/" className="hover:text-gray-300">
-                  Home
+              <Link to="/" className="text-white hover:text-yellow-300 transition-colors"
+              >
+                  Inicio
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-gray-300">
-                  About
+                <Link to="/about" className="text-white hover:text-yellow-300 transition-colors"
+                >
+                  Sobre Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="/search" className="hover:text-gray-300">
+                <Link to="/search" className="text-white hover:text-yellow-300 transition-colors"
+                >
                   Buscador
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-gray-300">
-                  Promotions
+                <Link to="/promotions" className="text-white hover:text-yellow-300 transition-colors"
+                >
+                  Promociones
                 </Link>
               </li>
             </ul>
+            
+            {/* Categorías */}
             <div className="relative">
               <a
                 href="#"
-                className="hover:text-gray-300"
+                className="text-white hover:text-yellow-300 transition-colors"
+
                 onClick={toggleCategories}
               >
-                Categorias
+                Categorías
               </a>
               {showCategories && (
-                <ul className="absolute mt-2 bg-gray-800 text-white p-2 rounded-lg shadow-md z-50">
+                <ul className="absolute mt-2 bg-white text-verde-oliva p-2 rounded-lg shadow-md z-50">
                   {categories.map((category, index) => (
-                    <li key={index} className="hover:text-gray-300">
+                    <li key={index} className="hover:text-rojo-granate transition-colors">
                       {category}
                     </li>
                   ))}
@@ -76,18 +92,30 @@ const Header = () => {
             </div>
           </nav>
         </div>
+
+        {/* Sección del usuario y carrito */}
         <div className="flex items-center space-x-5 text-nowrap">
           {user ? (
             <div className="flex gap-4 items-center">
               <p>{user.email}</p>
               {user.store ? (
-                <Link to="/storepanel" className="bg-blue-500 text-white px-4 py-2 rounded w-full hover:bg-blue-600">Mi tienda</Link>
+                <Link
+                  to="/storepanel"
+                  className="bg-verde-oliva text-white px-4 py-2 rounded hover:bg-rojo-granate transition-colors"
+                >
+                  Mi tienda
+                </Link>
               ) : (
-                <Link to="/account" className="bg-blue-500 text-white px-4 py-2 rounded w-full hover:bg-blue-600">Cuenta</Link>
+                <Link
+                  to="/account"
+                  className="bg-verde-oliva text-white px-4 py-2 rounded hover:bg-rojo-granate transition-colors"
+                >
+                  Cuenta
+                </Link>
               )}
               <button
                 onClick={handleLogout}
-                className="bg-red-500 text-white px-4 py-2 rounded w-full hover:bg-red-600"
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
               >
                 Cerrar sesión
               </button>
@@ -98,7 +126,7 @@ const Header = () => {
               <Link to="/login">
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="text-lg cursor-pointer hover:text-gray-300"
+                  className="text-white text-lg cursor-pointer hover:text-yellow-300 transition-colors" 
                 />
               </Link>
             </>
@@ -107,7 +135,7 @@ const Header = () => {
           <Link to="/cart">
             <FontAwesomeIcon
               icon={faShoppingCart}
-              className="text-lg cursor-pointer hover:text-gray-300"
+              className="text-white text-lg cursor-pointer hover:text-yellow-300 transition-colors" 
             />
           </Link>
         </div>
@@ -117,3 +145,4 @@ const Header = () => {
 };
 
 export default Header;
+

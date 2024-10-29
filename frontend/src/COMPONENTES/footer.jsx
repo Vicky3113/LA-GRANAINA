@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-100">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-md">
-          <strong className="block text-center text-xl font-bold text-gray-900 sm:text-3xl">
+        <strong className="block text-center text-xl font-bold text-gray-900 sm:text-3xl">
           No te pierdas lo último, suscríbete a nuestro boletín.
           </strong>
 
@@ -18,10 +18,8 @@ const Footer = () => {
                 type="email"
                 placeholder="john@doe.com"
               />
-              <button
-                className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-              >
-                Subscribe
+              <button className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700">
+                Subscríbete
               </button>
             </div>
           </form>
@@ -30,8 +28,10 @@ const Footer = () => {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">
             <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium natus quod eveniet
-              aut perferendis distinctio iusto repudiandae, provident velit earum?
+            En La Granaína, nos dedicamos a promover productos locales de alta calidad, desde artículos para el hogar hasta tecnología y moda. 
+            Creemos en el valor de nuestra comunidad y trabajamos para que cada cliente sienta la autenticidad de Granada en cada producto.
+            Suscríbete a nuestro boletín
+            Mantente al día con las últimas noticias, promociones exclusivas y lanzamientos de productos.
             </p>
 
             <div className="mt-6 flex justify-center gap-4 lg:justify-start">
@@ -102,21 +102,21 @@ const Footer = () => {
           <div className="mx-auto max-w-sm lg:max-w-none">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <p className="font-medium text-gray-900">About Us</p>
+                <p className="font-bold text-gray-900">Quiénes somos</p>
                 <nav className="mt-6 flex flex-col space-y-1">
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Company</a>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">History</a>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Careers</a>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Contact Us</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Nuestros Historia</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Nuestro Equipo</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Compromiso Local</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Contacto</a>
                 </nav>
               </div>
 
               <div>
-                <p className="font-medium text-gray-900">Services</p>
+                <p className="font-bold text-gray-900">Servicios</p>
                 <nav className="mt-6 flex flex-col space-y-1">
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Web Design</a>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Development</a>
-                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Marketing</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Diseño de Producto</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Diseño de Marca</a>
+                  <a className="text-gray-700 transition hover:text-gray-700/75" href="#">Estrategia de Venta</a>
                   <a className="text-gray-700 transition hover:text-gray-700/75" href="#">SEO</a>
                 </nav>
               </div>
