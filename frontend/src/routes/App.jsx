@@ -19,7 +19,7 @@ import Register from './routes/register.jsx';
 import RegisterStore from './routes/registerStore.jsx'
 import StorePage from './routes/storePage.jsx';
 import StorePanel from './routes/storePanel.jsx';
-import Promociones from './routes/promociones.jsx';
+import Promociones from './routes/Promociones.jsx';
 
 
 function App() {

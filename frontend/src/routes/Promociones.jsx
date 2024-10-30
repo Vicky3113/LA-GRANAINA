@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
-import Promociones from './routes/Promociones.jsx';
+
 
 
 const Promociones = () => {
   const cards = [
-    { id: 1, title: 'Oferta 1', content: 'Producto destacado 1', description: 'Descuento especial', imageUrl: '/images/productos/producto1.jpeg' },
-    { id: 2, title: 'Oferta 2', content: 'Producto destacado 2', description: 'Descuento especial', imageUrl: '/images/productos/producto2.jpeg' },
+    { id: 1, title: 'Oferta 1', content: 'Producto destacado 1', description: 'Descuento especial', imageUrl: 'https://plus.unsplash.com/premium_photo-1683121696175-d05600fefb85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGVjbm9sb2dpYXxlbnwwfHwwfHx8MA%3D%3D' },
+    { id: 2, title: 'Oferta 2', content: 'Producto destacado 2', description: 'Descuento especial', imageUrl: 'https://images.unsplash.com/photo-1651936716950-7aca46b99653?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRlbGVmb25vcyUyMG1vdmlsZXN8ZW58MHx8MHx8fDA%3D' },
     // Añadir más tarjetas según sea necesario
   ];
 
