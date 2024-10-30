@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
-import Promociones from './routes/Promociones.jsx';
 
-
-const Promociones = () => {
+const promociones = () => {
   const cards = [
     { id: 1, title: 'Oferta 1', content: 'Producto destacado 1', description: 'Descuento especial', imageUrl: '/images/productos/producto1.jpeg' },
     { id: 2, title: 'Oferta 2', content: 'Producto destacado 2', description: 'Descuento especial', imageUrl: '/images/productos/producto2.jpeg' },
@@ -89,4 +87,4 @@ const Promociones = () => {
   );
 };
 
-export default Promociones;
+export default promociones;
