@@ -49,14 +49,14 @@ const ProductCard = ({ productInfo }) => {
           <>
             <div className="flex gap-4 items-center">
               <button
-                className="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600 transition duration-300 text-center"
+                className="bg-button-gray-900 text-button-text-white py-1 px-4 rounded hover:bg-gray-700 hover:text-button-text-white transition-colors duration-300 text-center"
                 onClick={handleAddToCart}
               >
                 +
               </button>
               {cartProduct.quantity}
               <button
-                className="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600 transition duration-300 text-center disabled:bg-gray-300"
+                className="bg-button-gray-900 text-button-text-white py-1 px-4 rounded hover:bg-gray-700 hover:text-button-text-white transition-colors duration-300 text-center disabled:bg-gray-300"
                 onClick={handleRemoveOneItemFromCart}
                 disabled={cartProduct.quantity <= 1}
               >
@@ -65,18 +65,18 @@ const ProductCard = ({ productInfo }) => {
             </div>
             <button
               type="button"
-              className="group inline-block rounded-full bg-gradient-to-r from-green-500 via-green-500 to-green-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+              className="group inline-block rounded-full bg-button-gray-900 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
               onClick={handleRemoveFromCart}
             >
               <span className="block rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-                Eliminarl del carrito
+                Eliminar del carrito
               </span>
             </button>
           </>
         ) : (
           <button
             type="button"
-            className="group inline-block rounded-full bg-gradient-to-r from-green-400 via-green-400 to-green-400 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+            className="group inline-block rounded-full bg-button-gray-900 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
             onClick={handleAddToCart}
           >
             <span className="block rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
@@ -85,7 +85,7 @@ const ProductCard = ({ productInfo }) => {
           </button>
         )}
         <a
-          className="flex items-center justify-center py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border-2 border-blue-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          className="flex items-center justify-center py-2.5 px-5 me-2 mb-2 text-sm font-medium text-footer-text-gray-900 focus:outline-none bg-white rounded-full border-2 border-button-gray-900 hover:bg-gray-100 hover:text-button-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-100"
           onClick={handleOpenDetails}
           style={{ textDecoration: "none" }}
         >
