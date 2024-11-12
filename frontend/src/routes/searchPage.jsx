@@ -124,7 +124,7 @@ const SearchPage = () => {
             </div>
           </div>
 
-      {/* Productos Destacados */}
+   {/* Productos Destacados */}
 <div className="mt-12">
   <h2 className="text-2xl font-semibold text-footer-text-gray-900 mb-4">Productos Destacados</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -132,40 +132,41 @@ const SearchPage = () => {
     <ProductCard 
       key="1" 
       productInfo={{
-        name: "Producto 1", 
-        price: "20€", 
-        image: "https://images.unsplash.com/photo-1523289619259-44358ba02ba5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b3JkZW5hZG9yZXN8ZW58MHx8MHx8fDA%3D"
+        name: "Chaqueta de cuero auténtica", 
+        price: "1220€", 
+        imageUrl: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tYnJlJTIwY2hhcXVldGF8ZW58MHx8MHx8fDA%3D"
       }} 
     />
     {/* Producto 2 */}
     <ProductCard 
       key="2" 
       productInfo={{
-        name: "Producto 2", 
-        price: "30€", 
-        image: "https://plus.unsplash.com/premium_photo-1681302547882-e26efde7f7b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVsZWZvbm9zfGVufDB8fDB8fHww"
+        name: "Teléfono Samsung Galaxy S24", 
+        price: "1200€", 
+        imageUrl: "https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVsZWZvbm8lMjBtb3ZpbHxlbnwwfHwwfHx8MA%3D%3D"
       }} 
     />
     {/* Producto 3 */}
     <ProductCard 
       key="3" 
       productInfo={{
-        name: "Producto 3", 
-        price: "15€", 
-        image: "https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kdW1lbnRhcmlhfGVufDB8fDB8fHww"
+        name: "Silla Plegable", 
+        price: "150€", 
+        imageUrl: "https://images.unsplash.com/photo-1504198458649-3128b932f49e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3RvcyUyMGhvZ2FyfGVufDB8fDB8fHww"
       }} 
     />
     {/* Producto 4 */}
     <ProductCard 
       key="4" 
       productInfo={{
-        name: "Producto 4", 
-        price: "50€", 
-        image: "https://images.unsplash.com/photo-1575277340591-849c346c4542?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9nYXIlMjBwcm9kdWN0b3N8ZW58MHx8MHx8fDA%3D"
+        name: "Chaqueta mujer", 
+        price: "500€", 
+        imageUrl: "https://images.unsplash.com/photo-1652689223597-8cecc8cc3968?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHJhamVzJTIwbXVqZXJ8ZW58MHx8MHx8fDA%3D"
       }} 
     />
   </div>
 </div>
+
 
   
 
