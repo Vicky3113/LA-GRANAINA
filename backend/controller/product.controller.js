@@ -1,51 +1,51 @@
 const { Product } = require("../model/product.model");
-const User = require("../model/user.model");
 
 async function getAll(req, res) {
   try {
-    const productInfo = await Product.find();
-    res.status(200).send(productInfo);
+    const { page = 1, limit = 10 } = req.query; // Soporte para paginación
+    const productInfo = await Product.find()
+      .skip((page - 1) * limit)
+      .limit(parseInt(limit))
+      .populate("sellerId", "name username"); // Obtén la información básica del vendedor
+    res.status(200).json(productInfo);
   } catch (e) {
-    res.status(500).send(JSON.stringify({ message: "Internal server error" }));
+    console.error(e);
+    res.status(500).json({ message: "Internal server error" });
   }
 }
 
 async function get(req, res) {
   try {
     const { product } = req.params;
-    let productInfo = await Product.findOne({ URLName: product });
-    if(!productInfo){
-      res.status(404).json({error: 'Product not found'})
+
+    if (!product) {
+      res.status(400).json({ error: "Product identifier is required" });
       return;
     }
-    const sellerInfo = await User.findOne({
-      _id: productInfo.sellerId,
-    });
-    if (!sellerInfo) {
-      res.status(500).json({ error: "Internal server error" });
+
+    // Busca el producto y usa `populate` para obtener la información del vendedor
+    const productInfo = await Product.findOne({ URLName: product }).populate(
+      "sellerId",
+      "name username"
+    );
+
+    if (!productInfo) {
+      res.status(404).json({ error: "Product not found" });
       return;
     }
-    productInfo = {
+
+    // Construcción del objeto de respuesta con los datos del producto y vendedor
+    const response = {
       ...productInfo._doc,
-      sellerInfo: { name: sellerInfo.name, username: sellerInfo.username },
+      sellerInfo: productInfo.sellerId, // Ya viene poblado con `name` y `username`
     };
-    if (productInfo.sellerId) {
-      const sellerInfo = await User.findOne({
-        _id: productInfo.sellerId,
-      });
-      if (sellerInfo) {
-        productInfo.sellerInfo = { name: sellerInfo.name, username: sellerInfo.username }
-      } else {
-        throw new Error("Error");
-      }
-    } else {
-      throw new Error('Errorr: the product ' + product.URLName + " does not have a seller")
-    }
-    res.status(200).json(productInfo);
+
+    res.status(200).json(response);
   } catch (e) {
-    console.log(e);
-    res.status(500).send(JSON.stringify({ message: "Internal server error" }));
+    console.error(e);
+    res.status(500).json({ message: "Internal server error" });
   }
 }
 
 module.exports = { getAll, get };
+
