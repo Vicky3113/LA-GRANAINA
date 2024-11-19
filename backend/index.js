@@ -1,56 +1,79 @@
+// Cargar las variables de entorno desde el archivo .env
 require("dotenv").config();
 
+// Importar módulos necesarios
 const express = require("express");
-const app = express();
-const port = 5000;
-const cors = require("cors");
-
-const helmet = require("helmet");
-app.use(helmet());
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-app.disable("x-powered-by");
-
 const mongoose = require("mongoose");
+const cors = require("cors");
+const helmet = require("helmet");
+const path = require("path");
 
+// Crear una instancia de Express
+const app = express();
+
+// Definir el puerto en el que correrá el servidor
+const port = process.env.PORT || 5000;
+
+// Configurar middlewares
+app.use(helmet()); // Seguridad HTTP
+app.use(express.json()); // Parsear JSON
+app.use(express.urlencoded({ extended: true })); // Parsear URL-encoded data
+app.use(cors()); // Habilitar CORS
+app.disable("x-powered-by"); // Ocultar información de Express
+
+// Obtener las variables de entorno para la conexión a MongoDB
+const mongoURI = process.env.MONGO_URI;
+const dbName = process.env.MONGO_DB;
+
+// Construir la cadena de conexión completa
+const connectionString = `${mongoURI}/${dbName}`;
+
+// Opciones de conexión para Mongoose
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
+
+// Conectar a MongoDB usando Mongoose
 mongoose
-  .connect(process.env.MONG_URI, { dbName: process.env.MONG_DB })
+  .connect(process.env.MONGO_URI, { dbName: process.env.MONGO_DB })
   .then(() => {
-    console.log("Connected to the database.");
+    console.log("Conectado a MongoDB exitosamente.");
 
     app.listen(port, () => {
-      console.log(`Example app listening on port ${port}`);
+      console.log(`Servidor corriendo en el puerto ${port}`);
     });
   })
-  .catch(() => {
-    console.log("Connection failed");
+  .catch((error) => {
+    console.error("Error al conectar a MongoDB:", error);
+    process.exit(1); // Salir del proceso si la conexión falla
   });
 
-const product = require("./routes/product");
-const storeProducts = require("./routes/storeProducts");
-const storeAccount = require("./routes/storeAccount");
-const storePurchases = require('./routes/storePurchases')
-const user = require("./routes/user");
-const search = require("./routes/search");
-const payment = require("./routes/payment");
+// Importar rutas
+const productRoutes = require("./routes/product");
+const storeProductsRoutes = require("./routes/storeProducts");
+const storeAccountRoutes = require("./routes/storeAccount");
+const storePurchasesRoutes = require("./routes/storePurchases");
+const userRoutes = require("./routes/user");
+const searchRoutes = require("./routes/search");
+const paymentRoutes = require("./routes/payment");
 
-app.use("/api/products/", product);
-app.use("/api/storepanel/products/", storeProducts);
-app.use("/api/storepanel/account/", storeAccount);
-app.use("/api/storepanel/purchases/", storePurchases);
-app.use("/api/users/", user);
-app.use("/api/search", search);
-app.use("/api/payment", payment);
+// Usar las rutas importadas
+app.use("/api/products", productRoutes);
+app.use("/api/storepanel/products", storeProductsRoutes);
+app.use("/api/storepanel/account", storeAccountRoutes);
+app.use("/api/storepanel/purchases", storePurchasesRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/search", searchRoutes);
+app.use("/api/payment", paymentRoutes);
 
-// Custom 404 message
+
 app.use((req, res, next) => {
-  res.status(404).json({ error: "Page not found" });
+  res.status(404).json({ error: "Página no encontrada" });
 });
 
-// Custom errro handler message
+// Manejo de errores generales
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ error: "Internal server error" });
+  res.status(500).json({ error: "Error interno del servidor" });
 });

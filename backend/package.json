@@ -12,7 +12,7 @@
     "zxcvbn": "^4.4.2"
   },
   "scripts": {
-    "start": "node index.js", 
-    "dev": "nodemon index.js" 
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   }
 }

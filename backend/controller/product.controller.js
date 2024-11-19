@@ -23,7 +23,6 @@ async function get(req, res) {
       return;
     }
 
-    // Busca el producto y usa `populate` para obtener la información del vendedor
     const productInfo = await Product.findOne({ URLName: product }).populate(
       "sellerId",
       "name username"
@@ -34,7 +33,6 @@ async function get(req, res) {
       return;
     }
 
-    // Construcción del objeto de respuesta con los datos del producto y vendedor
     const response = {
       ...productInfo._doc,
       sellerInfo: productInfo.sellerId, // Ya viene poblado con `name` y `username`
@@ -47,5 +45,33 @@ async function get(req, res) {
   }
 }
 
-module.exports = { getAll, get };
+// Nuevo endpoint: Crear productos
+async function create(req, res) {
+  try {
+    const { name, description, price, sellerId, URLName } = req.body;
+
+    // Validar los datos obligatorios
+    if (!name || !description || !price || !sellerId || !URLName) {
+      res.status(400).json({ error: "Missing required fields" });
+      return;
+    }
+
+    // Crear un nuevo producto en la base de datos
+    const newProduct = new Product({
+      name,
+      description,
+      price,
+      sellerId,
+      URLName,
+    });
+
+    const savedProduct = await newProduct.save();
+    res.status(201).json(savedProduct);
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ message: "Internal server error" });
+  }
+}
+
+module.exports = { getAll, get, create };
 
