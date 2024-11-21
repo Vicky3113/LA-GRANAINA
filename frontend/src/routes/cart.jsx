@@ -36,7 +36,7 @@ function CartPage() {
                   <tr key={product._id} className="hover:bg-gray-100">
                     <td className="p-4">
                       <Link
-                        to={`/product/${product.URLName}`}
+                        to={`/product/${product._id}`}
                         className="text-blue-500 hover:underline"
                       >
                         {product.name}

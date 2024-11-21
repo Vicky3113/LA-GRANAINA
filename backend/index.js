@@ -41,14 +41,11 @@ if (!mongoURI || !dbName) {
 const connectionString = `${mongoURI}/${dbName}`;
 
 // Opciones de conexión para Mongoose
-const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-};
+
 
 // Conectar a MongoDB usando Mongoose
 mongoose
-  .connect(connectionString, options)
+  .connect(connectionString)
   .then(() => {
     console.log("Conectado a MongoDB exitosamente.");
 
