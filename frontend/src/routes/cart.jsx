@@ -37,7 +37,7 @@ function CartPage() {
                     <td className="p-4">
                       <Link
                         to={`/product/${product._id}`}
-                        className="text-blue-500 hover:underline"
+                        className="text-grey-900 hover:underline"
                       >
                         {product.name}
                       </Link>
@@ -67,7 +67,7 @@ function CartPage() {
             <div className="flex justify-between items-center mt-6">
               <button
                 onClick={clearCart}
-                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                className="bg-red-800 text-white px-4 py-2 rounded hover:bg-red-900"
               >
                 Vaciar Carrito
               </button>
@@ -76,7 +76,7 @@ function CartPage() {
               </div>
               <Link
                 to="/processPayment"
-                className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+                className="bg-red-800 text-white px-6 py-2 rounded hover:bg-red-900"
               >
                 Proceder al Pago
               </Link>
