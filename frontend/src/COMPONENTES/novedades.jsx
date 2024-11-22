@@ -3,14 +3,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 
 const CardCarousel = () => {
   const cards = [
-    { id: 1, title: 'Tarjeta 1', content: 'Contenido de la tarjeta 1', description: 'Breve descripción 1', imageUrl: '/images/productos/producto1.jpeg' },
-    { id: 2, title: 'Tarjeta 2', content: 'Contenido de la tarjeta 2', description: 'Breve descripción 2', imageUrl: '/images/productos/producto2.jpeg' },
-    { id: 3, title: 'Tarjeta 3', content: 'Contenido de la tarjeta 3', description: 'Breve descripción 3', imageUrl: '/images/productos/producto3.jpeg' },
-    { id: 4, title: 'Tarjeta 4', content: 'Contenido de la tarjeta 4', description: 'Breve descripción 4', imageUrl: '/images/productos/producto4.jpeg' },
-    { id: 5, title: 'Tarjeta 5', content: 'Contenido de la tarjeta 5', description: 'Breve descripción 5', imageUrl: '/images/productos/producto5.jpeg' },
-    { id: 6, title: 'Tarjeta 6', content: 'Contenido de la tarjeta 6', description: 'Breve descripción 6', imageUrl: '/images/productos/producto6.jpeg' },
-    { id: 7, title: 'Tarjeta 7', content: 'Contenido de la tarjeta 7', description: 'Breve descripción 7', imageUrl: '/images/productos/producto7.jpeg' },
-    { id: 8, title: 'Tarjeta 8', content: 'Contenido de la tarjeta 8', description: 'Breve descripción 8', imageUrl: '/images/productos/producto8.jpeg' },
+    { id: 1, title: 'Sillones salón', content: 'Cómodos y elegantes', description: 'Elegancia y confort para transformar tu sala en un espacio único', imageUrl: 'https://plus.unsplash.com/premium_photo-1674815329488-c4fc6bf4ced8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNhbG9ufGVufDB8fDB8fHww' },
+    { id: 2, title: 'Sillas de  jardín', content: 'material de  calidad', description: 'Estilo y durabilidad para disfrutar al aire libre con total comodidad.', imageUrl: 'https://images.unsplash.com/photo-1601654253194-260e0b6984f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNpbGxhcyUyMGRlJTIwamFyZCVDMyVBRG58ZW58MHx8MHx8fDA%3D' },
+    { id: 3, title: 'Sombrilla', content: 'Para tardes refrescantes', description: 'Protección y diseño para tus días soleados en el jardín', imageUrl: 'https://images.unsplash.com/photo-1515722517894-80416e393995?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29tYnJpbGxhJTIwamFyZCVDMyVBRG58ZW58MHx8MHx8fDA%3Dg' },
+    { id: 4, title: 'Ordenador Portátil', content: 'DELL 16GB 1T', description: 'Rendimiento portátil para trabajar, estudiar o divertirte sin límites.', imageUrl: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JkZW5hZG9yJTIwZGVsbHxlbnwwfHwwfHx8MA%3D%3D' },
+    { id: 5, title: 'Ollas  cocina', content: 'De acero inoxidable', description: 'Cocina con calidad y resistencia de nivel profesional.', imageUrl: 'https://images.unsplash.com/photo-1605433247501-698725862cea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b2xsYXMlMjBhY2VybyUyMGlub3hpZGFibGUlMjBjb2NpbmF8ZW58MHx8MHx8fDA%3D' },
+    { id: 6, title: 'Teléfono móvil', content: 'Xiami A7', description: 'Tecnología avanzada para mantenerte conectado siempre', imageUrl: 'https://images.unsplash.com/photo-1507955987999-df4864ee80d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVsJUMzJUE5Zm9ubyUyMHhpb21pfGVufDB8fDB8fHww' },
+    { id: 7, title: 'Edredones nórdicos', content: 'Alta calidad', description: 'Calidez y suavidad para tus noches más acogedoras.', imageUrl: 'https://plus.unsplash.com/premium_photo-1702531819085-4815383bd175?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWRyZWRvbmVzJTIwJTIwbiVDMyVCM3JkaWNvc3xlbnwwfHwwfHx8MA%3D%3D' },
+    { id: 8, title: 'Sábanas de algodón puro', content: 'Colores  varios', description: 'Sueña en grande con la frescura y comodidad del algodón', imageUrl: 'https://plus.unsplash.com/premium_photo-1702910931866-2642eee270b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWRyZWRvbmVzJTIwJTIwbiVDMyVCM3JkaWNvc3xlbnwwfHwwfHx8MA%3D%3D' },
   ];
 
   // Función para barajar el array de tarjetas
