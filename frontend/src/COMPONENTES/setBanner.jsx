@@ -11,12 +11,16 @@ const Banner = () => {
           <p className="mb-6 text-sm lg:text-base text-gray-700">
             Suscríbete a nuestro newsletter para recibir las últimas novedades y usa nuestras herramientas de ventas para convertir a los visitantes en clientes de pago.
           </p>
+
           <a
             href="contacto.php"
-            className="w-full text-white shadow-lg bg-verde-oliva hover:bg-rojo-granate focus:outline-none focus:ring-2 focus:ring-verde-oliva focus:ring-opacity-50 rounded-lg px-4 py-2 text-center font-bold text-lg transition duration-300 ease-in-out sm:w-auto"
-          >
-            Empezar
+            className="w-full text-button-text-white shadow-lg bg-button-gray-900 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-text-gray-300 focus:ring-opacity-50 rounded-lg px-4 py-2 text-center font-bold text-lg transition duration-300 ease-in-out sm:w-auto"
+              >
+           Empezar
           </a>
+
+
+
         </div>
         <div className="col-span-1 md:col-span-2 flex justify-center md:justify-end">
           <img
