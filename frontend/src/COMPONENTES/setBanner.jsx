@@ -20,7 +20,7 @@ const Banner = () => {
         </div>
         <div className="col-span-1 md:col-span-2 flex justify-center md:justify-end">
           <img
-            src="/images/Escritorio-removebg.png" // Asegúrate de que la ruta sea correcta en tu proyecto
+            src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b3JkZW5hZG9yJTIwdHJhYmFqb3xlbnwwfHwwfHx8MA%3D%3D" // Asegúrate de que la ruta sea correcta en tu proyecto
             className="w-full max-w-[300px] lg:max-w-[450px] select-none"
             alt="Optimización de tienda online"
           />
