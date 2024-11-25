@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 export default function Carousel() {
   // Array de 17 imágenes en la carpeta public/images
   const slides = [
-    "/images/imagen 01.jpg",
+    "https://plus.unsplash.com/premium_photo-1681160405580-a68e9c4707f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGN8ZW58MHx8MHx8fDA%3D",
     "/images/imagen 02.jpg",
     "/images/imagen 03.jpg",
     "/images/imagen 04.jpg",

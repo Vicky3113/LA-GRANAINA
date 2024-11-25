@@ -197,7 +197,7 @@ function AboutUs() {
   title="Conoce a nuestro equipo"
   content="Nuestro equipo está formado por personas apasionadas y comprometidas con nuestra misión. Marta Gómez, directora de relaciones con la comunidad, aporta su experiencia en proyectos locales. José Martínez, nuestro especialista en logística, garantiza que cada pedido llegue en perfectas condiciones. Y Lucía Herrera, encargada de innovación, asegura que siempre avancemos con ideas frescas y sostenibles."
   className="mx-auto max-w-3xl px-8 py-6 text-white bg-gray-100 rounded-lg my-8 text-center shadow-md"
-  imageURL="https://unsplash.com/es/fotos/emprendedores-y-empresarios-exitosos-que-logran-objetivos-Pxz75CRqvkM"
+  imageURL="https://plus.unsplash.com/premium_photo-1661400100934-1ba03c96cc14?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uYXMlMjB0cmFiYWphbmRvfGVufDB8fDB8fHww"
 
 />
 
